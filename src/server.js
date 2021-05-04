@@ -4,7 +4,7 @@ var fs = require('fs');
 http.createServer(function (request, response) {
     console.log('request ', request.url);
 
-    fs.readFile('./index.html', function(error, content) {
+    fs.readFile('./src/index.html', function(error, content) {
         if (error) {
             response.writeHead(500);
             response.end('Error: '+error.code+' ..\n');            
